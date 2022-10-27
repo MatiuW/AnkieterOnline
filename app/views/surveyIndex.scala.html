@@ -1,0 +1,27 @@
+@(survey: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Creating an Object from a JSON String</h2>
+<h1 id="hSurvey">@survey</h1>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+const txt = document.getElementById("hSurvey").innerHTML;
+const obj = JSON.parse(txt);
+document.getElementById("demo").innerHTML = obj.questions[0]
+console.log(document.getElementById("demo").innerHTML = obj.questions[0].question)
+</script>
+
+<!--<script>-->
+<!--    const txt2 = @survey;-->
+<!--    const obj2 = JSON.parse(txt2);-->
+<!--    document.getElementById("demo2").innerHTML = obj2.id;-->
+<!--</script>-->
+
+</body>
+</html>
